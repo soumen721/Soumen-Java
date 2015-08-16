@@ -1,6 +1,13 @@
-Test ...Git File Upload
+if(subscrnBID!=null){
 
-https://github.com/soumen721/Soumen-Java.git
+List subscrnDataList=null;
+try {
+	//subscrnDataList = super.createSubscriptionManagementBO().getSubscriptionList(busTypeCd, subscrnBID+"", userContext.getRegionCode(), Integer.parseInt(userContext.getSelectedApplID()));
+	Class[] parameterTypes = {String.class,String.class, String.class,int.class};								
+	Object[] args = {busTypeCd, subscrnBID+"", userContext.getRegionCode(), Integer.parseInt(userContext.getSelectedApplID())}; 
+	subscrnDataList = (List)CDIMIServiceUtility.invoke(CDIMIMyReportConstants.MBR_BUSINESS_SERVICE_MY_REPORT, 
+																				 "getSubscriptionList", parameterTypes, args);
 
+} catch (Exception e) {
 
-again commit
+}
