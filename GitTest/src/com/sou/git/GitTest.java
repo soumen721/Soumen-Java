@@ -7,7 +7,8 @@ public class GitTest {
 		System.out.println("Testing Marge");
 		TestMe tm=new TestMe();
 		String greet=tm.greeting();
-		System.out.println(greet+" Welcome to Git Merge Test");
+		
+		String test= greet+"Testing Merge";
 	}
 
 }
